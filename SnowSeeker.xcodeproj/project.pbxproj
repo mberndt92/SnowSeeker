@@ -11,6 +11,11 @@
 		8AE91A172A0A268C00BB4211 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE91A162A0A268C00BB4211 /* ContentView.swift */; };
 		8AE91A192A0A268D00BB4211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE91A182A0A268D00BB4211 /* Assets.xcassets */; };
 		8AE91A1C2A0A268D00BB4211 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE91A1B2A0A268D00BB4211 /* Preview Assets.xcassets */; };
+		8AE91A232A0A26CC00BB4211 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AE91A222A0A26CC00BB4211 /* resorts.json */; };
+		8AE91A252A0A277000BB4211 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE91A242A0A277000BB4211 /* Resort.swift */; };
+		8AE91A272A0A282100BB4211 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE91A262A0A282100BB4211 /* Bundle-Decodable.swift */; };
+		8AE91A292A0A337D00BB4211 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE91A282A0A337D00BB4211 /* WelcomeView.swift */; };
+		8AE91A2B2A0A357A00BB4211 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE91A2A2A0A357A00BB4211 /* ResortView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		8AE91A162A0A268C00BB4211 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8AE91A182A0A268D00BB4211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AE91A1B2A0A268D00BB4211 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8AE91A222A0A26CC00BB4211 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		8AE91A242A0A277000BB4211 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		8AE91A262A0A282100BB4211 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		8AE91A282A0A337D00BB4211 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8AE91A2A2A0A357A00BB4211 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +61,14 @@
 		8AE91A132A0A268C00BB4211 /* SnowSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				8AE91A222A0A26CC00BB4211 /* resorts.json */,
 				8AE91A142A0A268C00BB4211 /* SnowSeekerApp.swift */,
 				8AE91A162A0A268C00BB4211 /* ContentView.swift */,
+				8AE91A2A2A0A357A00BB4211 /* ResortView.swift */,
+				8AE91A282A0A337D00BB4211 /* WelcomeView.swift */,
 				8AE91A182A0A268D00BB4211 /* Assets.xcassets */,
+				8AE91A242A0A277000BB4211 /* Resort.swift */,
+				8AE91A262A0A282100BB4211 /* Bundle-Decodable.swift */,
 				8AE91A1A2A0A268D00BB4211 /* Preview Content */,
 			);
 			path = SnowSeeker;
@@ -125,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE91A232A0A26CC00BB4211 /* resorts.json in Resources */,
 				8AE91A1C2A0A268D00BB4211 /* Preview Assets.xcassets in Resources */,
 				8AE91A192A0A268D00BB4211 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE91A292A0A337D00BB4211 /* WelcomeView.swift in Sources */,
 				8AE91A172A0A268C00BB4211 /* ContentView.swift in Sources */,
+				8AE91A252A0A277000BB4211 /* Resort.swift in Sources */,
+				8AE91A2B2A0A357A00BB4211 /* ResortView.swift in Sources */,
 				8AE91A152A0A268C00BB4211 /* SnowSeekerApp.swift in Sources */,
+				8AE91A272A0A282100BB4211 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
