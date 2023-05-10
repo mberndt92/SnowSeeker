@@ -21,15 +21,24 @@ extension View {
 
 struct ContentView: View {
     
+    enum SortOrder {
+        case normal
+        case alphabetical
+        case country
+    }
+    
     @StateObject var favorites = Favorites()
     
     @State private var searchText = ""
+    
+    @State private var showingSortOrder = false
+    @State private var sortOrder: SortOrder = .normal
     
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
     var body: some View {
         NavigationView {
-            List(filteredResorts) { resort in
+            List(sortedResorts(filteredResorts)) { resort in
                 NavigationLink {
                     ResortView(resort: resort)
                 } label: {
@@ -63,11 +72,45 @@ struct ContentView: View {
             }
             .navigationTitle("Resorts")
             .searchable(text: $searchText, prompt: "Search for a resort")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingSortOrder = true
+                    } label: {
+                        Image(systemName: "arrow.left.arrow.right")
+                    }
+                }
+            }
             
             WelcomeView()
         }
+        .confirmationDialog("Sort order", isPresented: $showingSortOrder, actions: {
+            Button("Normal") {
+                sortOrder = .normal
+            }
+            
+            Button("Alphabetical") {
+                sortOrder = .alphabetical
+            }
+            
+            Button("By country") {
+                sortOrder = .country
+            }
+        })
+//        .context
         .environmentObject(favorites)
 //        .phoneOnlyNavigationView()
+    }
+    
+    func sortedResorts(_ resorts: [Resort]) -> [Resort] {
+        switch sortOrder {
+        case .normal:
+            return resorts
+        case .alphabetical:
+            return resorts.sorted(by: { $0.name < $1.name })
+        case .country:
+            return resorts.sorted(by: { $0.country < $1.country })
+        }
     }
     
     private var filteredResorts: [Resort] {
